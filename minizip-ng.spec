@@ -8,6 +8,7 @@ Group:		Libraries
 #Source0Download: https://github.com/zlib-ng/minizip-ng/releases
 Source0:	https://github.com/zlib-ng/minizip-ng/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	21ae30c9f1a96c9673709e17a254598a
+Patch0:		%{name}-cmake.patch
 URL:		https://github.com/zlib-ng/minizip-ng
 BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 3.13
@@ -58,6 +59,7 @@ Dokumentacja API biblioteki minizip-ng.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # disable compat and get minizip-ng names

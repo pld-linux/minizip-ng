@@ -1,0 +1,15 @@
+--- minizip-ng-3.0.9/CMakeLists.txt.orig	2023-03-16 17:37:00.000000000 +0100
++++ minizip-ng-3.0.9/CMakeLists.txt	2023-03-17 22:05:14.324647206 +0100
+@@ -735,12 +735,6 @@ if(NOT SKIP_INSTALL_LIBRARIES AND NOT SK
+     write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake
+         COMPATIBILITY SameMajorVersion)
+     set(MINIZIP_CONFIG_CONTENT "@PACKAGE_INIT@\n")
+-    if(MINIZIP_DEP_PKG)
+-        string(APPEND MINIZIP_CONFIG_CONTENT "include(CMakeFindDependencyMacro)\n")
+-        foreach(PKG_NAME ${MINIZIP_DEP_PKG})
+-            string(APPEND MINIZIP_CONFIG_CONTENT "find_dependency(${PKG_NAME} REQUIRED)\n")
+-        endforeach()
+-    endif()
+     string(APPEND MINIZIP_CONFIG_CONTENT "include(\"\${CMAKE_CURRENT_LIST_DIR}/${PROJECT_NAME}.cmake\")")
+     file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/minizip-config.cmake.in ${MINIZIP_CONFIG_CONTENT})
+ 
