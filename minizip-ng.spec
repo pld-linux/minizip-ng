@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Biblioteka operacji na plikach zip napisana w C
 Name:		minizip-ng
 Version:	3.0.9
 Release:	1
-License:	MIT
+License:	Zlib
 Group:		Libraries
 #Source0Download: https://github.com/zlib-ng/minizip-ng/releases
 Source0:	https://github.com/zlib-ng/minizip-ng/archive/%{version}/%{name}-%{version}.tar.gz
