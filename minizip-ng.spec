@@ -13,6 +13,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 3.13
 BuildRequires:	openssl-devel
 BuildRequires:	rpm-build >= 4.6
+BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	xz-devel
 BuildRequires:	zlib-devel
 BuildRequires:	zstd-devel
