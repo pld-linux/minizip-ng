@@ -1,7 +1,3 @@
-#
-# Conditional build:
-%bcond_without	apidocs		# API documentation
-#
 Summary:	zip manipulation library written in C
 Summary(pl.UTF-8):	Biblioteka operacji na plikach zip napisana w C
 Name:		minizip-ng
@@ -95,8 +91,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/minizip-ng.pc
 %{_libdir}/cmake/minizip-ng
 
-%if %{with apidocs}
 %files apidocs
 %defattr(644,root,root,755)
 %doc doc/{zip,*.md}
-%endif
