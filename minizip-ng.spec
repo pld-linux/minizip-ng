@@ -59,7 +59,7 @@ Dokumentacja API biblioteki minizip-ng.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 # disable compat and get minizip-ng names
