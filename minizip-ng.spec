@@ -1,13 +1,13 @@
 Summary:	zip manipulation library written in C
 Summary(pl.UTF-8):	Biblioteka operacji na plikach zip napisana w C
 Name:		minizip-ng
-Version:	4.0.7
+Version:	4.0.10
 Release:	1
 License:	Zlib
 Group:		Libraries
 #Source0Download: https://github.com/zlib-ng/minizip-ng/releases
 Source0:	https://github.com/zlib-ng/minizip-ng/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	7c1c8e967eafd54c6adf529dac9676e3
+# Source0-md5:	9b4de14db78016419598d0f292fde244
 Patch0:		%{name}-cmake.patch
 URL:		https://github.com/zlib-ng/minizip-ng
 BuildRequires:	bzip2-devel
@@ -84,12 +84,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README.md
-%attr(755,root,root) %{_libdir}/libminizip-ng.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libminizip-ng.so.4
+%{_libdir}/libminizip-ng.so.*.*.*
+%ghost %{_libdir}/libminizip-ng.so.4
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libminizip-ng.so
+%{_libdir}/libminizip-ng.so
 %{_includedir}/minizip-ng
 %{_pkgconfigdir}/minizip-ng.pc
 %{_libdir}/cmake/minizip-ng
